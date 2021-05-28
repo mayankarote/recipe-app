@@ -6,8 +6,8 @@ const Recipe = ({title, image, ingredients}) => {
                <div className="card2">
                     <h2>{title}</h2>
                     <ol>
-                        {ingredients.map(ingredients => {
-                            <li>{ingredients.text}</li>
+                        {ingredients.map(ingredient => {
+                            <li>{ingredient.text}</li>
                         })}
                     </ol>
                     <img src={image} className="img-container"/>
