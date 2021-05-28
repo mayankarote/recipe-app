@@ -1,8 +1,8 @@
 import React, { useEffect , useState} from 'react';
 import './App.css';
 import Recipe from './Recipe';
-
 import Footer from './Footer';
+import logo from './logo2.png';
 
 const App = () => {
   const APP_ID = "087d0d95";
@@ -36,6 +36,7 @@ const App = () => {
   return (
     <div className="App">
         <form onSubmit={getSearch} className="search-form">
+        <img src={logo} alt="store" style={{ width: 100, marginRight: 50, marginTop: 10, borderRadius: 100 }} />
         <input className="search-bar" type="text" value={search} onChange={updateSearch} />
         <button className="search-button" type="submit">Search</button>
       </form>
