@@ -2,6 +2,8 @@ import React, { useEffect , useState} from 'react';
 import './App.css';
 import Recipe from './Recipe';
 
+import Footer from './Footer';
+
 const App = () => {
   const APP_ID = "087d0d95";
   const APP_KEY = "ba7ebf6b028795b0f6f1500387926d6c	";
@@ -32,7 +34,7 @@ const App = () => {
     setSearch('');
   }
   return (
-    <div className="App container">
+    <div className="App">
         <form onSubmit={getSearch} className="search-form">
         <input className="search-bar" type="text" value={search} onChange={updateSearch} />
         <button className="search-button" type="submit">Search</button>
@@ -45,6 +47,7 @@ const App = () => {
           ingredients={recipe.recipe.ingredients}
         />
       ))}
+      <Footer />
         </div>
       );
 }
