@@ -7,7 +7,6 @@ const App = () => {
   const APP_KEY = "ba7ebf6b028795b0f6f1500387926d6c	";
   
   const [counter, setCounter] = useState(0);
-
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -19,7 +18,6 @@ const App = () => {
 
     const data = await response.json();
     setRecipes(data.hits);
-
   }
 
   return (
@@ -29,6 +27,9 @@ const App = () => {
         <input className="search-bar" type="text" />
         <button className="search-button" type="submit">Search</button>
       </form>
+      {recipes.map(recipe => (
+        <Recipe/>
+      ))}
     </div>
   );
 }
