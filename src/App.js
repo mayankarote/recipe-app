@@ -1,4 +1,4 @@
-import React, { Component, useEffect , useState} from 'react';
+import React, { component, useEffect , useState} from 'react';
 import './App.css';
 import Recipe from './Recipe';
 
