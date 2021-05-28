@@ -18,13 +18,16 @@
   width: 50%;
   border: none;
   padding: 10px;
+  border-radius: 0.5em;
 }
 
 .search-button {
   background: rgb(27, 27, 27);
   border: none;
+  border-radius: 0.5em;
   padding: 10px 20px;
-  color: white;
+  color: rgb(243, 239, 239);
+  margin: 20px;
 }
 .search-button:hover {
   color: white;
@@ -35,7 +38,7 @@
   border-color: transparent;
   transition: all 1s linear;
   background-color: rgb(19, 16, 16);
-  color: rgb(240, 46, 16);
+  color: rgb(247, 244, 243);
   text-align: center;
   width: 50%;
   margin-left: 25%;
@@ -59,4 +62,16 @@
   margin-top: 10%;
   padding: 75px;
   text-align: center;
+}
+.recipe {
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px rgb(238, 218, 218);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: rgb(245, 241, 241);
+  color: black;
+  align-items: center;
+  min-width: 40%;
 }

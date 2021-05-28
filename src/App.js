@@ -37,7 +37,7 @@ const App = () => {
     <div className="App">
         <form onSubmit={getSearch} className="search-form">
         <img src={logo} alt="store" style={{ width: 100, marginRight: 50, marginTop: 10, borderRadius: 100 }} />
-        <input className="search-bar" type="text" value={search} onChange={updateSearch} />
+        <input className="search-bar" placeholder="Search" type="text" value={search} onChange={updateSearch} />
         <button className="search-button" type="submit">Search</button>
       </form>
       {recipes.map(recipe => (
