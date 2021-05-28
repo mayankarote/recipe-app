@@ -7,14 +7,18 @@ const App = () => {
   
   const [counter, setCounter] = useState(0);
 
+  const [recipes, setRecipes] = useState([]);
+
   useEffect(() => {
-    
+    getRecipes();
   }, []);
   
   const getRecipes = async () => {
     const response = await fetch(`https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`);
 
-    const data = response.json();
+    const data = await response.json();
+    setRecipes(data.hits);
+
   }
 
   return (
