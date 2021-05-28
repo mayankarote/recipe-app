@@ -1,4 +1,4 @@
-import React, { component, useEffect , useState} from 'react';
+import React, { useEffect , useState} from 'react';
 import './App.css';
 import Recipe from './Recipe';
 
@@ -32,9 +32,7 @@ const App = () => {
     setSearch('');
   }
   return (
-    
     <div className="App container">
-        <div className="">
         <form onSubmit={getSearch} className="search-form">
         <input className="search-bar" type="text" value={search} onChange={updateSearch} />
         <button className="search-button" type="submit">Search</button>
@@ -48,7 +46,6 @@ const App = () => {
         />
       ))}
         </div>
-    </div>
-  );
+      );
 }
 export default App;
